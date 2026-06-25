@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Invoice</title>
+<style>
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Helvetica,Arial,sans-serif; color:#333; }
+  .invoice { max-width:750px; margin:40px auto; padding:40px; }
+  .header { display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:30px; }
+  .logo { width:80px; height:80px; background:#1a1a1a; border-radius:8px; display:flex; align-items:center; justify-content:center; }
+  .logo span { color:#fff; font-size:42px; font-weight:700; }
+  .invoice-title { text-align:right; }
+  .invoice-title h1 { font-size:32px; font-weight:300; letter-spacing:2px; }
+  .invoice-title .number { font-size:14px; color:#888; margin-top:4px; }
+  .meta { display:flex; justify-content:space-between; margin-bottom:30px; }
+  .from { font-size:13px; line-height:1.6; }
+  .from .name { font-weight:600; font-size:14px; }
+  .dates { text-align:right; font-size:13px; line-height:1.8; }
+  .dates .label { color:#888; display:inline-block; width:80px; text-align:right; margin-right:12px; }
+  .balance-row { background:#f5f5f5; padding:6px 12px; border-radius:4px; margin-top:4px; font-weight:600; }
+  .bill-to { margin-bottom:30px; font-size:13px; }
+  .bill-to .label { color:#888; font-size:11px; text-transform:uppercase; letter-spacing:1px; }
+  .bill-to .client { font-weight:600; font-size:14px; margin-top:2px; }
+  table { width:100%; border-collapse:collapse; margin-bottom:30px; }
+  thead th { background:#1a1a1a; color:#fff; padding:10px 12px; font-size:12px; text-transform:uppercase; letter-spacing:0.5px; font-weight:500; }
+  thead th:first-child { text-align:left; border-radius:4px 0 0 4px; }
+  thead th:last-child { border-radius:0 4px 4px 0; }
+  thead th:not(:first-child) { text-align:right; }
+  tbody td { padding:12px; font-size:13px; border-bottom:1px solid #eee; }
+  tbody td:first-child { font-weight:500; }
+  tbody td:not(:first-child) { text-align:right; }
+  .totals { width:280px; margin-left:auto; font-size:13px; }
+  .totals .row { display:flex; justify-content:space-between; padding:6px 0; }
+  .totals .row .label { color:#888; }
+  .totals .total-row { border-top:2px solid #333; font-weight:600; font-size:15px; padding-top:10px; margin-top:4px; }
+  .notes { margin-top:40px; font-size:12px; line-height:1.6; }
+  .notes .section-label { color:#888; font-size:11px; text-transform:uppercase; letter-spacing:1px; margin-bottom:4px; }
+  @media print { .invoice { margin:0; padding:30px; } }
+</style>
+</head>
+<body>
+<div class="invoice">
+  <div class="header">
+    <div class="logo"><span>YOU</span></div> <!-- your initial/logo -->
+    <div class="invoice-title"><h1>INVOICE</h1><div class="number"># 001</div></div>
+  </div>
+  <div class="meta">
+    <div class="from">
+      <div class="name">Your Name</div>
+      <div>you@email.com</div>
+    </div>
+    <div class="dates">
+      <div><span class="label">Date:</span> Jan 1, 2026</div>
+      <div><span class="label">Due Date:</span> Jan 1, 2026</div>
+      <div class="balance-row"><span class="label">Balance Due:</span> $0.00</div>
+    </div>
+  </div>
+  <div class="bill-to">
+    <div class="label">Bill To:</div>
+    <div class="client">Client Name</div>
+  </div>
+  <table>
+    <thead><tr><th>Item</th><th>Qty</th><th>Rate</th><th>Amount</th></tr></thead>
+    <tbody>
+      <!-- Paste the output of:  podbill <folder> --html-rows  here -->
+      <tr><td>Episode name (mm:ss)</td><td>0</td><td>$0.00</td><td>$0.00</td></tr>
+    </tbody>
+  </table>
+  <div class="totals">
+    <div class="row"><span class="label">Subtotal:</span><span>$0.00</span></div>
+    <div class="row"><span class="label">Tax (0%):</span><span>$0.00</span></div>
+    <div class="row total-row"><span class="label">Total:</span><span>$0.00</span></div>
+  </div>
+  <div class="notes">
+    <div class="section-label">Terms:</div>
+    <p>Payment via &lt;your method&gt;.</p>
+  </div>
+</div>
+</body>
+</html>
