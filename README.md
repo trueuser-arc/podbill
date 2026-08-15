@@ -29,7 +29,7 @@ round it, multiply, retype it into an invoice. `podbill` removes that whole step
 
 ```bash
 # Requires Python 3.10+ and ffmpeg (`brew install ffmpeg` / `apt install ffmpeg`)
-git clone https://github.com/<you>/podbill && cd podbill
+git clone https://github.com/trueuser-arc/podbill && cd podbill
 python3 podbill/invoice_minutes.py --help
 ```
 

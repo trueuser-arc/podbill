@@ -1,2 +1,15 @@
 __pycache__/
 *.pyc
+*.pyo
+.DS_Store
+
+# Local-only publish / deployment notes (not for public repo)
+.publish-notes.local.md
+.launch-preflight.local.sh
+
+# Editor / tool artifacts
+.venv/
+.env
+*.egg-info/
+dist/
+build/
