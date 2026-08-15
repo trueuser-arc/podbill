@@ -71,7 +71,7 @@ output into, then print to PDF from any browser (or render headlessly with
 
 `podbill` is the billing sliver of a bigger toolkit. If you want the whole operator workflow —
 ingest, transcribe, suggest cuts, generate show notes and social copy, master, and publish —
-that's **Showsmith** (in the works). `podbill` is free, standalone, and always will be.
+that's **Showsmith** — live at https://showsmith-3v2.pages.dev. `podbill` is free, standalone, and always will be.
 
 ## License
 
